@@ -1,4 +1,5 @@
 import { } from 'react'
+import VantaBackground from './components/VantaBackground.jsx'
 import Header from './components/Header.jsx'
 import Navbar from './components/Navbar.jsx'
 import LinkForm from './components/LinkForm.jsx'
@@ -12,13 +13,16 @@ function App() {
   return (
     <>
       <div>
-      <Header />
-      <Navbar />
-      <LinkForm />
-      <ShortenedLink />
-      <Info />
-      <Footer />
-    </div>
+        <VantaBackground />
+          <div className="content">
+            <Header />
+            <Navbar />
+            <LinkForm />
+            <ShortenedLink />
+            <Info />
+            <Footer />
+          </div>
+      </div>
     </>
   )
 }

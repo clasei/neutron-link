@@ -3,9 +3,8 @@ import { } from 'react'
 function Header() {
   return (
     <header>
-      {/* Contenido del Header aquí */}
       <h1>Neutron Link</h1>
-      <p>Link Sharing Made Easy</p>
+      <p className="subtitle">link sharing made easy</p>
     </header>
   )
 }

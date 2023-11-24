@@ -17,7 +17,7 @@ function VantaBackground() {
       midtoneColor: 0x5dff,
       lowlightColor: 0x101b6d,
       baseColor: 0xc0c4c,
-      speed: 0.70,
+      speed: 0.50,
       zoom: 1.50
     });
     return () => {
@@ -25,7 +25,7 @@ function VantaBackground() {
     };
   }, []);
 
-  return <div ref={vantaRef} style={{ width: '100vw', height: '100vh' }} />;
+  return <div ref={vantaRef} className="vanta-background" style={{ width: '100vw', height: '100vh' }} />;
 }
 
 export default VantaBackground;
