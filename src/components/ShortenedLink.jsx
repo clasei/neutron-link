@@ -2,10 +2,10 @@ import { } from 'react'
 
 function ShortenedLink() {
     return (
-      <div>
+      <div className="shortened">
         <p>2. COPY THE BRAND NEW NEUTRON LINK</p>
         <input />
-        <button>Copy</button>
+        <button>copy</button>
       </div>
     )
   }
