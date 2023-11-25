@@ -19,8 +19,10 @@ body, html {
 
 body {
   font-family: Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
   background-color: #0a192f9a;
-  color: #333;
+  color: #e6f1ff;
   box-sizing: border-box;
 }
 
@@ -85,11 +87,12 @@ h1 {
 
 .subtitle {
   color: #e6f1ff;
+  opacity: 0.75;
   text-shadow:  1px 1px 2.5px rgb(244, 244, 235);
   font-size: 1.5rem;
   font-weight: 300;
   cursor: default;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
 }
 
 form {
@@ -115,20 +118,17 @@ footer {
   width: 100%;
 }
 
-.centered {
-  text-align: center;
-}
-
-.button {
-  background-color: #61dafb;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+input {
+  border-radius: 25px;
+  box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
+  padding: 1rem;
+  margin: 1rem;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
+  box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: 500;
@@ -141,13 +141,14 @@ button {
 button:hover {
   border-color: #646cff;
   background-color: rgb(205, 219, 9);
+  transform: scale(1.1);
+  transition-duration: 3s ease;
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
 
 @media (max-width: 768px) {
 

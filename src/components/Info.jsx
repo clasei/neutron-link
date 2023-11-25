@@ -3,7 +3,7 @@ import { } from 'react'
 function Info() {
     return (
       <info>
-        <p>info</p>
+        <p>3. SHARE YOUR LINK & ENJOY!</p>
       </info>
     )
   }
