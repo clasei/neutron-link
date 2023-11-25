@@ -92,11 +92,6 @@ h1 {
   margin-top: 0.5rem;
 }
 
-nav {
-  background-color: #61dafb;
-  padding: 0.5rem;
-}
-
 form {
   margin-top: 2rem;
 }
@@ -145,7 +140,7 @@ button {
 
 button:hover {
   border-color: #646cff;
-  background-color: #60a;
+  background-color: rgb(205, 219, 9);
 }
 
 button:focus,

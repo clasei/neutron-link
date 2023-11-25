@@ -1,7 +1,6 @@
 import { } from 'react'
 import VantaBackground from './components/VantaBackground.jsx'
 import Header from './components/Header.jsx'
-import Navbar from './components/Navbar.jsx'
 import LinkForm from './components/LinkForm.jsx'
 import ShortenedLink from './components/ShortenedLink.jsx'
 import Info from './components/Info.jsx'
@@ -16,7 +15,6 @@ function App() {
         <VantaBackground />
           <div className="content">
             <Header />
-            <Navbar />
             <LinkForm />
             <ShortenedLink />
             <Info />
