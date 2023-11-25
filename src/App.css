@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 #root {
   margin: 0 auto;
@@ -7,7 +8,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 3rem;
 }
 
 body, html {
@@ -49,6 +49,7 @@ body {
   z-index: 3;
   height: 100vh;
   overflow-y: scroll;
+  padding-bottom: 3rem;
 }
 
 @keyframes fadeIn {
@@ -164,21 +165,51 @@ form {
 }
 
 footer {
-  background-color: #20232a;
-  color: white;
-  position: fixed;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(194, 194, 194, 0.902);
+  font-size: 0.7rem;
+  background-color: rgba(40, 40, 40, 0.7);
+  box-shadow: 0 3px 10px rgba(95, 95, 95, 0.5);
+  padding: 10px 30px;
+  width: 90%;
+  width: auto;
+  margin: 10px;
+  margin-bottom: 0.5rem;
+  border-radius: 13px;
+  text-align: center;
+  box-sizing: border-box;
   bottom: 0;
-  width: 100%;
+  position: relative; 
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(94, 160, 255);
+  margin: 2px;
+  transition: color 0.5s;
+}
+
+footer a:hover {
+  color: rgb(10, 112, 255);
+  background-color: pink;
+  font-weight: bold;
+}
+
+footer span {
+  margin: 0 0;
+}
+
+#rocketIcon {
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 @media (max-width: 768px) {
   
-  #root {
-    padding-bottom: 5rem;
-  }
-  
   .content {
     gap: 1.5rem;
+    padding-bottom: 5rem;
   }
   
   header {
@@ -217,5 +248,9 @@ footer {
   button {
     margin-bottom: 0rem;
     font-size: 0.95rem;
+  }
+
+  footer {
+    margin-bottom: 1rem;
   }
 }

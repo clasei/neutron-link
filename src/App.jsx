@@ -18,8 +18,8 @@ function App() {
             <LinkForm />
             <ShortenedLink />
             <Info />
-            <Footer />
           </div>
+          <Footer />
       </div>
     </>
   )
