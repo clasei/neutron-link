@@ -7,14 +7,14 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -41,6 +41,7 @@ body {
 .content {
   position: relative;
   padding: 1rem;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,8 +49,9 @@ body {
   gap: 3rem;
   z-index: 3;
   height: 100vh;
-  overflow-y: scroll;
-  padding-bottom: 3rem;
+  overflow-y: auto;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
 }
 
 @keyframes fadeIn {
@@ -79,7 +81,7 @@ h1 {
   font-weight: bolder;
   display: inline-block;
   cursor: default;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .header-title {
@@ -99,13 +101,19 @@ h1 {
   font-weight: 300;
   cursor: default;
   margin: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .neutron-image {
-  padding: 1rem;
-  border-radius: 25px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
   width: 50px;
+}
+
+.neutron-image:hover {
+  transform: scale(1.1);
+  transition-duration: 3s ease;
 }
 
 .shortened-link {
@@ -120,7 +128,7 @@ h1 {
 }
 
 .info {
-  padding: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 input {
@@ -128,7 +136,10 @@ input {
   border-radius: 25px;
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 1rem;
-  margin-top: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
 }
 
 button {
@@ -161,7 +172,18 @@ button:focus-visible {
 }
 
 form {
-  margin-top: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hint {
+  margin-top: 0rem;
+  color: rgb(205, 219, 9);
+}
+
+.hint:hover {
+  transform: scale(1.1);
+  transition-duration: 3s ease;
 }
 
 footer {
@@ -174,6 +196,7 @@ footer {
   width: 90%;
   width: auto;
   margin: 10px;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 13px;
   text-align: center;
@@ -208,11 +231,13 @@ footer span {
 @media (max-width: 768px) {
   
   .content {
-    gap: 1.5rem;
-    padding-bottom: 5rem;
+    gap: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
   }
   
   header {
+    padding-top: 0rem;
     padding-bottom: 0rem;
   }
     
@@ -226,13 +251,9 @@ footer span {
     padding-bottom: 0.75rem;
   }
 
-  .neutron-image {
-    padding: 0.5rem;
-  }
-
   p {
     font-size: 0.8rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .info, .form, .shortened {
@@ -248,6 +269,13 @@ footer span {
   button {
     margin-bottom: 0rem;
     font-size: 0.95rem;
+  }
+
+  .neutron-image {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding: 0.5rem;
+    border-radius: 15px;
   }
 
   footer {
