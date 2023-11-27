@@ -4,7 +4,7 @@ function ShortenedLink() {
     return (
       <div className="shortened">
         <p>2. COPY THE NEUTRON LINK</p>
-        <input />
+        <div><input /></div>
         <button>copy</button>
       </div>
     )

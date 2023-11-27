@@ -4,7 +4,7 @@ function LinkForm() {
     return (
       <form>
         <p>1. PASTE THE LINK YOU WANT TO SHARE</p>
-        <input type="text" placeholder="put here the url you'll make shorter" />
+        <div><input type="text" placeholder="put here the url you'll make shorter" /></div>
         <button type="submit">shorten</button>
       </form>
     )
