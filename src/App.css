@@ -14,7 +14,7 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -23,7 +23,7 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  background-color: #0a192f9a;
+  background-color: #0a192fb0;
   color: #e6f1ff;
   box-sizing: border-box;
 }
@@ -41,15 +41,15 @@ body {
 .content {
   position: relative;
   padding: 1rem;
-  padding-top: 0.5rem;
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
   z-index: 3;
-  height: 100vh;
-  overflow-y: auto;
+  min-height: 100vh;
+  overflow-y: hidden;
   margin: 0 auto;
   margin-bottom: 0.5rem;
 }
@@ -107,8 +107,8 @@ h1 {
 .neutron-image {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  border-radius: 5px;
-  width: 50px;
+  border-radius: 25px;
+  width: 150px;
 }
 
 .neutron-image:hover {
@@ -178,12 +178,13 @@ form {
 
 .hint {
   margin-top: 0rem;
-  color: rgb(205, 219, 9);
+  color: #61dafb;
 }
 
 .hint:hover {
   transform: scale(1.1);
   transition-duration: 3s ease;
+  cursor: default;
 }
 
 .code-link-container {
@@ -283,13 +284,19 @@ footer span {
   
   .content {
     gap: 1rem;
-    padding-top: 0rem;
-    padding-bottom: 2rem;
+    margin-top: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  body, html {
+    overflow-y: auto;
   }
   
   header {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
     
   h1 {
@@ -299,7 +306,7 @@ footer span {
 
   .subtitle {
     font-size: 1rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1.5rem;
   }
 
   p {
@@ -318,18 +325,26 @@ footer span {
   }
 
   button {
-    margin-bottom: 0rem;
+    margin-bottom: 0.5rem;
     font-size: 0.95rem;
   }
 
   .neutron-image {
     margin-top: 0rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0.5rem;
     padding: 0.5rem;
+    width: 75px;
     border-radius: 15px;
   }
 
+  .code-link-container {
+    margin-top: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   footer {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
   }
 }

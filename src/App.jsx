@@ -20,8 +20,8 @@ function App() {
             <ShortenedLink />
             <Info />
             <CodeLink />
-          </div>
-          <Footer />
+            <Footer />
+          </div>  
       </div>
     </>
   )
