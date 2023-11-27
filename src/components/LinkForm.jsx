@@ -18,9 +18,9 @@ function LinkForm() {
   };
 
   const generateShortId = () => {
-    // simple way to generate a 6 character string
+    // simple way to generate a 7 character string
     // it can be improve within the database
-    return Math.random().toString(36).substring(2, 8);
+    return Math.random().toString(36).substring(2, 9);
   };
 
   // function to handle form submissions
