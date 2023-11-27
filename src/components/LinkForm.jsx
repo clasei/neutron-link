@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { getFirestore, addDoc, collection } from 'firebase/firestore'
-import app from '../../firebase-config'
+import app from '../firebase-config'
 
 // initialize firestore
 const db = getFirestore(app);
@@ -15,13 +15,14 @@ function LinkForm() {
 
   const generateShortId = () => {
     // simple way to generate a 7 character string
-    // it can be improve within the database
+    // it can be improved within the database
     return Math.random().toString(36).substring(2, 9);
   };
 
   // function to handle form submissions
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submitted with URL:", url); // debug line
     const shortId = generateShortId();
 
     if (url) {
@@ -34,6 +35,7 @@ function LinkForm() {
 
         // construct the shortened link
         const newShortenedLink = `https://neutron-link-0.firebaseapp.com${shortId}`;
+        console.log("New shortened link:", newShortenedLink);
         setShortenedLink(newShortenedLink);
 
         // reset the input field
@@ -51,9 +53,11 @@ function LinkForm() {
         <div>
           <input
             type="text"
-            placeholder="Put here the url you'll make shorter"
+            placeholder="put here the url you'll make shorter"
             value={url}
             onChange={handleInputChange}
+            id="urlInput"
+            name="url" 
           />
           <button type="submit">Shorten</button>
         </div>
