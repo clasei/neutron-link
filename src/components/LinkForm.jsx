@@ -1,16 +1,12 @@
 import { useState } from 'react'
-import app from '../../firebase-config';
-import { getFirestore, addDoc, collection } from 'firebase/firestore';
+import { getFirestore, addDoc, collection } from 'firebase/firestore'
+import app from '../../firebase-config'
 
 // initialize firestore
 const db = getFirestore(app);
 
 function LinkForm() {
-
-  // state to store the input url
-  const [url, setUrl] = useState(''); 
-
-  // state to store the shortened link
+  const [url, setUrl] = useState('');
   const [shortenedLink, setShortenedLink] = useState('');
 
   const handleInputChange = (e) => {
@@ -26,11 +22,9 @@ function LinkForm() {
   // function to handle form submissions
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const shortId = generateShortId();
 
     if (url) {
-
       //logic to store the mapping of shortId to the original URL in Firestore
       try {
         await addDoc(collection(db, 'links'), {
@@ -49,7 +43,6 @@ function LinkForm() {
       }
     }
   };
-
 
     return (
       <div>

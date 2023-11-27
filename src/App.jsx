@@ -1,4 +1,4 @@
-import { } from 'react'
+import { useState } from 'react'
 import VantaBackground from './components/VantaBackground.jsx'
 import Header from './components/Header.jsx'
 import LinkForm from './components/LinkForm.jsx'
@@ -10,14 +10,16 @@ import './App.css'
 
 function App() {
 
+  const [shortenedLink, setShortenedLink] = useState('')
+
   return (
     <>
       <div>
         <VantaBackground />
           <div className="content">
             <Header />
-            <LinkForm />
-            <ShortenedLink />
+            <LinkForm setShortenedLink={setShortenedLink} />
+            <ShortenedLink shortenedLink={shortenedLink} />
             <Info />
             <CodeLink />
             <Footer />

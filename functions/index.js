@@ -1,19 +1,35 @@
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+admin.initializeApp();
+
+exports.shortenUrl = functions.https.onRequest(async (req, res) => {
+  if (req.method !== "POST") {
+    return res.status(405).send("Method Not Allowed");
+  }
+
+  const originalUrl = req.body.url;
+  if (!originalUrl) {
+    return res.status(400).send("No URL provided");
+  }
+
+  const shortId = generateShortId();
+
+  try {
+    const shortUrlRef = admin.firestore().collection("shortUrls").doc(shortId);
+    await shortUrlRef.set({originalUrl});
+    const newShortenedLink = `https://${process.env.REACT_APP_PROJECT_ID}.web.app/${shortId}`;
+    return res.status(200).send(newShortenedLink);
+  } catch (error) {
+    console.error("Error creating short URL: ", error);
+    return res.status(500).send("Internal Server Error");
+  }
+});
+
 /**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
+ * it generates a short random ID for the pasted url
+ * @return {string} short random ID
  */
-
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
-
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
-
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+function generateShortId() {
+  // the length of the ID can be adjusted here
+  return Math.random().toString(36).substring(2, 9);
+}
