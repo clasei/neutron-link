@@ -3,11 +3,11 @@ import neutronLinkImage from '../assets/images/neutron-link.png';
 
 function Info() {
     return (
-      <info>
+      <div className="info">
         <p>3. SHARE YOUR NEUTRON LINK</p>
         <img src={neutronLinkImage} alt="this is a neutron" className="neutron-image" />
-        <p className="hint">[ START AGAIN ]</p>
-      </info>
+        <button>repeat</button>
+      </div>
     )
   }
   
