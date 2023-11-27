@@ -186,6 +186,57 @@ form {
   transition-duration: 3s ease;
 }
 
+.code-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
+  z-index: 3;
+  color: #444;
+  transition: scale 1s ease-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px rgba(95, 95, 95, 0.5);
+  padding: 1rem;
+  margin: 2rem auto;
+  margin-top: 5rem;
+  border-radius: 25px; 
+}
+
+.code-link-container:hover {
+  scale: 0.9; 
+}
+
+.code-link-container svg {
+  width: 42px;
+  height: auto;
+  fill: currentColor;
+  transition: color 1s ease-out;
+}
+
+.code-link-container p {
+  margin: 0;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.code-link-container a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 1s ease-out;
+}
+
+.code-link-container a:hover {
+  text-decoration: none;
+  color: rgb(205, 219, 9);
+}
+
+.code-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 footer {
   font-family: 'Roboto Mono', monospace;
   color: rgba(194, 194, 194, 0.902);
