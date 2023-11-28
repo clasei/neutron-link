@@ -16,6 +16,17 @@ exports.shortenUrl = functions.https.onRequest((req, res) => {
       return res.status(400).send("No URL provided");
     }
 
+    const querySnapshot = await admin.firestore().collection("shortUrls")
+        .where("originalUrl", "==", originalUrl)
+        .get();
+
+    if (!querySnapshot.empty) {
+      const doc = querySnapshot.docs[0];
+      const existingShortId = doc.id;
+      const existingShortenedLink = `https://${process.env.REACT_APP_PROJECT_ID}.web.app/${existingShortId}`;
+      return res.status(200).send(existingShortenedLink);
+    }
+
     const shortId = generateShortId();
 
     try {
