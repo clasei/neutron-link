@@ -39,6 +39,7 @@ function LinkForm({ onShorten }) {
             placeholder="put here the url you'll make shorter"
             value={url}
             onChange={handleInputChange}
+            id="inputLink"
           />
           <button type="submit">Shorten</button>
         </div>
