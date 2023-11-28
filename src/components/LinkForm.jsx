@@ -23,7 +23,6 @@ function LinkForm({ onShorten }) {
 
       const data = await response.text();
       onShorten(data);
-      setUrl('');
     } catch (error) {
       console.error('Error: ', error);
     }

@@ -23,7 +23,7 @@ exports.shortenUrl = functions.https.onRequest((req, res) => {
     if (!querySnapshot.empty) {
       const doc = querySnapshot.docs[0];
       const existingShortId = doc.id;
-      const existingShortenedLink = `https://${process.env.REACT_APP_PROJECT_ID}.web.app/${existingShortId}`;
+      const existingShortenedLink = `https://neutron-link-0.web.app/${existingShortId}`;
       return res.status(200).send(existingShortenedLink);
     }
 
@@ -33,7 +33,7 @@ exports.shortenUrl = functions.https.onRequest((req, res) => {
       const db = admin.firestore();
       const shortUrlRef = db.collection("shortUrls").doc(shortId);
       await shortUrlRef.set({originalUrl, shortId});
-      const newShortenedLink = `https://${process.env.REACT_APP_PROJECT_ID}.web.app/${shortId}`;
+      const newShortenedLink = `https://neutron-link-0.web.app/${shortId}`;
       return res.status(200).send(newShortenedLink);
     } catch (error) {
       console.error("Error creating short URL: ", error);
