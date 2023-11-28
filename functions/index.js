@@ -41,7 +41,7 @@ exports.shortenUrl = functions.https.onRequest((req, res) => {
 });
 
 exports.redirect = functions.https.onRequest(async (req, res) => {
-  const shortId = req.path.split("/")[1];
+  const shortId = req.params.shortId;
   if (!shortId) {
     return res.status(404).send("Short link not provided");
   }
