@@ -13,7 +13,7 @@ function LinkForm({ onShorten }) {
 
     try {
       // CHECK URL ON FIREBASE FUNCTIONS AFTER DEPLOYMENT AND UPDATE HERE
-      const response = await fetch('https://us-central1-neutron-link-0.cloudfunctions.net/shortenUrl', {
+      const response = await fetch('http://localhost:5001/neutron-link-0/us-central1/shortenUrl', {
         method: 'POST',
         body: JSON.stringify({ url }),
         headers: {
