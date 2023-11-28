@@ -9,8 +9,11 @@ import Footer from './components/Footer.jsx'
 import './App.css'
 
 function App() {
-
   const [shortenedLink, setShortenedLink] = useState('')
+
+  const handleShortenedLink = (newShortenedLink) => {
+    setShortenedLink(newShortenedLink);
+  };
 
   return (
     <>
@@ -18,7 +21,7 @@ function App() {
         <VantaBackground />
           <div className="content">
             <Header />
-            <LinkForm setShortenedLink={setShortenedLink} />
+            <LinkForm onShorten={handleShortenedLink} />
             <ShortenedLink shortenedLink={shortenedLink} />
             <Info />
             <CodeLink />

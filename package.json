@@ -17,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.158.0",
+    "uuid": "^9.0.1",
     "vanta": "^0.5.24"
   },
   "devDependencies": {

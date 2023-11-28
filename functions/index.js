@@ -1,5 +1,7 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const {v4: uuidv4} = require("uuid");
+
 admin.initializeApp();
 
 exports.shortenUrl = functions.https.onRequest(async (req, res) => {
@@ -16,7 +18,7 @@ exports.shortenUrl = functions.https.onRequest(async (req, res) => {
 
   try {
     const shortUrlRef = admin.firestore().collection("shortUrls").doc(shortId);
-    await shortUrlRef.set({originalUrl});
+    await shortUrlRef.set({originalUrl, shortId});
     const newShortenedLink = `https://${process.env.REACT_APP_PROJECT_ID}.web.app/${shortId}`;
     return res.status(200).send(newShortenedLink);
   } catch (error) {
@@ -26,10 +28,9 @@ exports.shortenUrl = functions.https.onRequest(async (req, res) => {
 });
 
 /**
- * it generates a short random ID for the pasted url
- * @return {string} short random ID
+ * generates a unique short ID using the uuid package
+ * @return {string} a unique string ID.
  */
 function generateShortId() {
-  // the length of the ID can be adjusted here
-  return Math.random().toString(36).substring(2, 9);
+  return uuidv4();
 }
