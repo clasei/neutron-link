@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const cors = require("cors")({origin: true});
-const {v4: uuidv4} = require("uuid");
 
 admin.initializeApp();
 
@@ -28,7 +27,6 @@ exports.shortenUrl = functions.https.onRequest((req, res) => {
     }
 
     const shortId = generateShortId();
-
     try {
       const db = admin.firestore();
       const shortUrlRef = db.collection("shortUrls").doc(shortId);
@@ -42,10 +40,36 @@ exports.shortenUrl = functions.https.onRequest((req, res) => {
   });
 });
 
+exports.redirect = functions.https.onRequest(async (req, res) => {
+  const shortId = req.path.split("/")[1];
+
+  try {
+    const docRef = admin.firestore().collection("shortUrls").doc(shortId);
+    const docSnapshot = await docRef.get();
+
+    if (!docSnapshot.exists) {
+      return res.status(404).send("Short link does not exist");
+    }
+
+    const {originalUrl} = docSnapshot.data();
+    return res.redirect(301, originalUrl);
+  } catch (error) {
+    console.error("Error redirecting to the original URL:", error);
+    return res.status(500).send("Error processing your request");
+  }
+});
+
 /**
- * generates a unique short ID using the uuid package
- * @return {string} a unique string ID.
+ * generates a unique short ID
+ * @param {number} length
+ * @return {string}
  */
-function generateShortId() {
-  return uuidv4();
+function generateShortId(length = 7) {
+  // eslint-disable-next-line max-len
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
 }
