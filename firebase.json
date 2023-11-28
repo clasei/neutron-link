@@ -32,13 +32,13 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  },
-  "rewrites": [
-    {
-      "source": "/{shortId}",
-      "function": "redirect"
-    }
-  ],
+    },
+    "rewrites": [
+      {
+        "source": "/{shortId}",
+        "function": "redirect"
+      }
+    ],
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
