@@ -35,7 +35,7 @@
     },
     "rewrites": [
       {
-        "source": "/{shortId}",
+        "source": "/:shortId",
         "function": "redirect"
       }
     ],
