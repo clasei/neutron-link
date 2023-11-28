@@ -40,7 +40,7 @@ function LinkForm({ onShorten }) {
             onChange={handleInputChange}
             id="inputLink"
           />
-          <button type="submit">Shorten</button>
+          <button type="submit">shorten</button>
         </div>
       </form>
     </div>
