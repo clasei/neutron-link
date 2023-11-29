@@ -56,11 +56,9 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-75px);
   }
   to {
-    opacity: 1.5;
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -94,7 +92,7 @@ h1 {
 
 .subtitle {
   color: rgb(205, 219, 9);
-  opacity: 0.90;
+  opacity: 0.95;
   text-shadow:  1px 1px 2.5px rgb(244, 244, 235);
   font-size: 1.25rem;
   font-weight: 300;
@@ -148,6 +146,7 @@ button {
   background-color: #61dafb;
   cursor: pointer;
   transition: border-color 0.25s;
+  transition: transform 0.2s ease;
 }
 
 button:hover {
@@ -184,10 +183,6 @@ form {
   border-radius: 20px;
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   width: 75px;
-}
-
-.neutron-image:hover {
-  transform: scale(0.97);
 }
 
 .code-link-container {
