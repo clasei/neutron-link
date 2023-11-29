@@ -28,17 +28,16 @@
     "public": "dist",
     "ignore": [
       "firebase.json",
-      "src/firebase-config.jsx",
       "**/.*",
       "**/node_modules/**"
-    ]
-    },
+    ],
     "rewrites": [
       {
         "source": "/:shortId",
         "function": "redirect"
       }
-    ],
+    ]
+  },
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
