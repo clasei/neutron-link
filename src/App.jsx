@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import VantaBackground from './components/VantaBackground.jsx'
 import Header from './components/Header.jsx'
 import LinkForm from './components/LinkForm.jsx'
 import ShortenedLink from './components/ShortenedLink.jsx'
@@ -18,7 +17,6 @@ function App() {
   return (
     <>
       <div>
-        <VantaBackground />
           <div className="content">
             <Header />
             <LinkForm onShorten={handleShortenedLink} />

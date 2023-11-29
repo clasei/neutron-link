@@ -23,19 +23,10 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  background-color: #0a192fb0;
+  background: rgb(5,31,94);
+  background: linear-gradient(0deg, rgba(5,31,94,1) 26%, rgba(0,30,153,1) 64%, rgba(3,90,146,1) 100%);
   color: #e6f1ff;
   box-sizing: border-box;
-}
-
-.vanta-background {
-  position: fixed;
-  opacity: 0.75;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 .content {
@@ -48,6 +39,7 @@ body {
   gap: 3rem;
   z-index: 3;
   min-height: 100vh;
+  max-width: 400px;
   overflow-y: hidden;
   margin: 0 auto;
   margin-bottom: 0.5rem;
@@ -56,11 +48,9 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-75px);
   }
   to {
-    opacity: 1.5;
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -75,7 +65,7 @@ header {
 
 h1 {
   text-shadow:  1px 1px 2.5px rgb(244, 244, 235);
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: 5px;
   font-weight: bolder;
   display: inline-block;
@@ -94,42 +84,13 @@ h1 {
 
 .subtitle {
   color: rgb(205, 219, 9);
-  opacity: 0.90;
+  opacity: 0.95;
   text-shadow:  1px 1px 2.5px rgb(244, 244, 235);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   cursor: default;
   margin: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.neutron-image {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 25px;
-  width: 125px;
-}
-
-.neutron-image:hover {
-  transform: scale(0.97);
-}
-
-.shortened-link {
-  margin-top: 1rem;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 1rem;
-}
-
-.info, .form, .shortened {
-  margin-top: 0.5rem;
-}
-
-.info {
-  padding-bottom: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 input {
@@ -137,7 +98,13 @@ input {
   border-radius: 25px;
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 1rem;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p {
@@ -159,6 +126,7 @@ button {
   background-color: #61dafb;
   cursor: pointer;
   transition: border-color 0.25s;
+  transition: transform 0.2s ease;
 }
 
 button:hover {
@@ -173,9 +141,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-form {
-  margin-top: 0;
-  margin-bottom: 0;
+.shortened-link {
+  margin-top: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.info, .form, .shortened {
+  margin-top: 0.5rem;
+}
+
+.info {
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hint {
@@ -187,6 +168,14 @@ form {
   transform: scale(1.1);
   transition-duration: 3s ease;
   cursor: default;
+}
+
+.neutron-image {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
+  width: 75px;
 }
 
 .code-link-container {
@@ -299,17 +288,17 @@ footer span {
   }
     
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-bottom: 1.5rem;
   }
 
   p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
   }
 
@@ -321,6 +310,7 @@ footer span {
   input {
     padding: 0.75rem;
     margin-top: 0.25rem;
+    margin: 0.5rem auto;
   }
 
   button {
@@ -329,15 +319,14 @@ footer span {
   }
 
   .neutron-image {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    padding-top: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
     width: 75px;
     border-radius: 15px;
   }
 
   .code-link-container {
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
