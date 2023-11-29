@@ -103,17 +103,6 @@ h1 {
   padding-bottom: 0.5rem;
 }
 
-.neutron-image {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 25px;
-  width: 125px;
-}
-
-.neutron-image:hover {
-  transform: scale(0.97);
-}
-
 .shortened-link {
   margin-top: 1rem;
   background-color: #fff;
@@ -187,6 +176,18 @@ form {
   transform: scale(1.1);
   transition-duration: 3s ease;
   cursor: default;
+}
+
+.neutron-image {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
+  width: 75px;
+}
+
+.neutron-image:hover {
+  transform: scale(0.97);
 }
 
 .code-link-container {
