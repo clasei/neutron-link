@@ -29,7 +29,7 @@ function LinkForm({ onShorten }) {
   };
 
   return (
-    <div>
+    <div className="input-link">
       <form onSubmit={handleSubmit}>
         <p>1. PASTE THE LINK YOU WANT TO SHARE</p>
         <div>
