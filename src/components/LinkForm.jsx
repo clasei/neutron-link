@@ -30,12 +30,12 @@ function LinkForm({ onShorten }) {
 
   return (
     <div className="input-link">
+      <p className="steps">1. PASTE THE LONG URL</p>
       <form onSubmit={handleSubmit}>
-        <p>1. PASTE THE LINK YOU WANT TO SHARE</p>
         <div>
           <input
             type="text"
-            placeholder="put here the url you'll make shorter"
+            placeholder="here the link you'll make shorter"
             value={url}
             onChange={handleInputChange}
             id="inputLink"
