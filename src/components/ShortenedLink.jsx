@@ -13,11 +13,11 @@ function ShortenedLink({ shortenedLink }) {
 
   return (
     <div className="shortened">
-      <p>2. COPY THE NEUTRON LINK</p>
+      <p className="steps">2. COPY YOUR NEUTRON LINK</p>
       <div>
         <input value={shortenedLink} readOnly id="urlOutput" />
-      </div>
       <button onClick={copyToClipboard}>copy</button>
+      </div>
     </div>
   );
 }

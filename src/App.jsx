@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header.jsx'
+import Intro from './components/Intro.jsx'
 import LinkForm from './components/LinkForm.jsx'
 import ShortenedLink from './components/ShortenedLink.jsx'
 import Info from './components/Info.jsx'
@@ -19,6 +20,7 @@ function App() {
       <div>
           <div className="content">
             <Header />
+            <Intro />
             <LinkForm onShorten={handleShortenedLink} />
             <ShortenedLink shortenedLink={shortenedLink} />
             <Info />

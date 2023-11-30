@@ -36,10 +36,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   z-index: 3;
   min-height: 100vh;
-  max-width: 400px;
+  max-width: 500px;
   overflow-y: hidden;
   margin: 0 auto;
   margin-bottom: 0.5rem;
@@ -64,10 +64,10 @@ header {
 }
 
 h1 {
-  text-shadow:  1px 1px 2.5px rgb(244, 244, 235);
-  font-size: 4rem;
+  text-shadow:  1px 1px 1px rgb(244, 244, 235);
+  font-size: 5rem;
   letter-spacing: 5px;
-  font-weight: bolder;
+  font-weight: 750;
   display: inline-block;
   cursor: default;
   margin-bottom: 1rem;
@@ -84,13 +84,35 @@ h1 {
 
 .subtitle {
   color: rgb(205, 219, 9);
-  opacity: 0.95;
-  text-shadow:  1px 1px 2.5px rgb(244, 244, 235);
-  font-size: 1rem;
-  font-weight: 300;
+  text-shadow:  0.5px 0.5px 0.5px rgb(244, 244, 235);
+  font-weight: 600;
+  font-size: 1.5rem;
   cursor: default;
   margin: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0rem;
+}
+
+.intro {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #e6f1ff;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.steps {
+  color: rgb(205, 219, 9);
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: auto 0.5rem;
+  min-width: 400px;
 }
 
 input {
@@ -99,16 +121,6 @@ input {
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 1rem;
   margin: 1rem auto;
-}
-
-.input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-p {
-  margin-bottom: 0.5rem;
 }
 
 button {
@@ -141,39 +153,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.shortened-link {
-  margin-top: 1rem;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 1rem;
-}
-
-.info, .form, .shortened {
+.info, .form, .shortened, .input-link {
   margin-top: 0.5rem;
-}
-
-.info {
-  padding-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hint {
-  margin-top: 0rem;
-  color: #61dafb;
-}
-
-.hint:hover {
-  transform: scale(1.1);
-  transition-duration: 3s ease;
-  cursor: default;
+.info {
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .neutron-image {
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 20px;
+  margin-bottom: 1rem;
+  border-radius: 15px;
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   width: 75px;
 }
@@ -191,7 +189,7 @@ button:focus-visible {
   box-shadow: 0 3px 10px rgba(95, 95, 95, 0.5);
   padding: 1rem;
   margin: 0rem auto;
-  margin-top: 5rem;
+  margin-top: 4rem;
   border-radius: 25px; 
 }
 
@@ -233,7 +231,7 @@ footer {
   font-family: 'Roboto Mono', monospace;
   color: rgba(194, 194, 194, 0.902);
   font-size: 0.7rem;
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 10px rgba(95, 95, 95, 0.5);
   padding: 10px 30px;
   width: 90%;
@@ -283,8 +281,8 @@ footer span {
   
   header {
     margin-bottom: 0rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
   }
     
   h1 {
@@ -294,41 +292,50 @@ footer span {
 
   .subtitle {
     font-size: 0.9rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0rem;
   }
 
-  p {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-
-  .info, .form, .shortened {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  input {
-    padding: 0.75rem;
-    margin-top: 0.25rem;
+  .intro {
     margin: 0.5rem auto;
   }
 
+  p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .steps {
+    min-width: 300px;
+    font-size: 0.8rem;
+  }
+
   button {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-size: 0.95rem;
   }
 
+  input {
+    margin-top: 0rem;
+    margin-bottom: 0.25rem;
+    padding: 0.75rem;
+  }
+
+  .info, .form, .shortened {
+    margin-top: 0.3rem;
+  }
+
   .neutron-image {
-    margin-top: 0.75rem;
+    margin-top: 0.25rem;
     margin-bottom: 0.5rem;
     width: 75px;
     border-radius: 15px;
   }
 
   .code-link-container {
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   footer {
