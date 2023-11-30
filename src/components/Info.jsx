@@ -8,9 +8,13 @@ function Info() {
 
     return (
       <div className="info">
-        <p>3. SHARE YOUR NEUTRON LINK</p>
-        <img src={neutronLinkImage} alt="this is a neutron" className="neutron-image" />
-        <button onClick={clearInputFields}>repeat</button>
+        <p className="steps">3. SHARE & ENJOY</p>
+        <div>
+          <img src={neutronLinkImage} alt="this is a neutron" className="neutron-image" />
+        </div>
+        <div>
+          <button onClick={clearInputFields}>repeat</button>
+        </div>
       </div>
     )
   }
