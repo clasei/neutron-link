@@ -35,7 +35,7 @@ function ShortenedLink({ shortenedLink }) {
     <div className="shortened">
       <p className="steps">2. COPY YOUR NEUTRON LINK</p>
       <div>
-        <input value={shortenedLink} readOnly id="urlOutput" />
+        <input className="copy-output" value={shortenedLink} readOnly id="urlOutput" />
       <button onClick={copyToClipboard}>copy</button>
       <ToastContainer />
       </div>

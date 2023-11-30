@@ -13,7 +13,7 @@ function Info() {
           <img src={neutronLinkImage} alt="this is a neutron" className="neutron-image" />
         </div>
         <div>
-          <button onClick={clearInputFields}>repeat</button>
+          <button  className="repeat-button" onClick={clearInputFields}>repeat⟲</button>
         </div>
       </div>
     )
