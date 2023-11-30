@@ -144,6 +144,9 @@ button {
 button:hover {
   border-color: #646cff;
   background-color: rgb(205, 219, 9);
+  border-color: #e6f1ff;
+  border: 3px;
+  border-style: groove;
   transform: scale(1.1);
   transition-duration: 3s ease;
 }

@@ -1,13 +1,33 @@
 import { } from 'react'
 import PropTypes from 'prop-types'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function ShortenedLink({ shortenedLink }) {
   console.log("Received shortened link:", shortenedLink);
+  
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shortenedLink).then(() => {
-      alert('Link copied');
+      toast.success('Neutron Link copied!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }, (err) => {
-      console.error('Could not copy: ', err)
+      toast.error('Failed to copy link. Try again!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      console.error('Could not copy: ', err);
     });
   };
 
@@ -17,6 +37,7 @@ function ShortenedLink({ shortenedLink }) {
       <div>
         <input value={shortenedLink} readOnly id="urlOutput" />
       <button onClick={copyToClipboard}>copy</button>
+      <ToastContainer />
       </div>
     </div>
   );
