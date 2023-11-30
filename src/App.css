@@ -98,7 +98,7 @@ h1 {
   color: #e6f1ff;
   line-height: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
@@ -111,6 +111,7 @@ p {
   color: rgb(205, 219, 9);
   font-size: 0.9rem;
   font-weight: 900;
+  letter-spacing: 0.15rem;
   padding: auto 0.5rem;
   min-width: 400px;
 }
@@ -121,6 +122,10 @@ input {
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 1rem;
   margin: 1rem auto;
+}
+
+.copy-output {
+  background-color: rgb(229, 235, 153);
 }
 
 button {
@@ -156,6 +161,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.repeat-button {
+  background-color: #f7a02e;
+  margin-bottom: 1rem;
+}
+
 .info, .form, .shortened, .input-link {
   margin-top: 0.5rem;
   display: flex;
@@ -173,10 +183,10 @@ button:focus-visible {
 
 .neutron-image {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   border-radius: 15px;
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
-  width: 75px;
+  width: 50px;
 }
 
 .code-link-container {
@@ -257,7 +267,7 @@ footer a {
 
 footer a:hover {
   color: rgb(10, 112, 255);
-  background-color: pink;
+  background-color: rgb(205, 219, 9);
   font-weight: bold;
 }
 
@@ -299,7 +309,7 @@ footer span {
   }
 
   .intro {
-    margin: 0.5rem auto;
+    margin: 0rem auto;
   }
 
   p {
@@ -321,6 +331,8 @@ footer span {
     margin-top: 0rem;
     margin-bottom: 0.25rem;
     padding: 0.75rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .info, .form, .shortened {
@@ -329,20 +341,18 @@ footer span {
 
   .neutron-image {
     margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-    width: 75px;
+    width: 50px;
     border-radius: 15px;
   }
 
   .code-link-container {
     margin-top: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
   }
 
   footer {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 0rem;
   }
 }
