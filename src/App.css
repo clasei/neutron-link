@@ -59,7 +59,7 @@ header {
   background-color: transparent;
   font-family: 'Dosis', sans-serif;
   color: rgb(205, 219, 9);
-  margin: 1.5rem auto;
+  margin-bottom: 1.5rem;
   z-index: 2;
   animation: fadeIn 3s ease-out forwards;
 }
@@ -86,7 +86,7 @@ h1 {
 .subtitle {
   text-shadow:  0.5px 0.5px 0.5px rgb(244, 244, 235);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   cursor: default;
   margin: 0.5rem;
   padding-bottom: 0rem;
@@ -98,7 +98,7 @@ h1 {
   color: #e6f1ff;
   line-height: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 p {
@@ -109,13 +109,14 @@ p {
 
 .steps {
   color: #20232a;
-  background-color: rgb(205, 219, 9);
+  background-color: rgb(237, 255, 157);
+  border-radius: 25px;
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.15rem;
   padding: 0.25rem 1rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   min-width: 375px;
 }
 
@@ -128,7 +129,8 @@ input {
 }
 
 .copy-output {
-  background-color: rgb(170, 123, 30)
+  background-color: rgb(230, 212, 187);
+  border-color: rgb(219, 128, 9);
 }
 
 button {
@@ -151,7 +153,7 @@ button {
 
 button:hover {
   border-color: #646cff;
-  background-color: rgb(205, 219, 9);
+  background-color: rgb(219, 128, 9);
   border-color: #e6f1ff;
   border: 3px;
   border-style: groove;
