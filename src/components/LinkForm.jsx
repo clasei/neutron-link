@@ -30,7 +30,7 @@ function LinkForm({ onShorten }) {
 
   return (
     <div className="input-link">
-      <p className="steps">1. PASTE THE LONG URL</p>
+      <p className="steps">PASTE THE LONG URL</p>
       <form onSubmit={handleSubmit}>
         <div>
           <input
