@@ -21,7 +21,6 @@ body, html {
 
 body {
   font-family: Roboto, sans-serif;
-  font-weight: 600;
   letter-spacing: 2px;
   background: rgb(5,31,94);
   background: linear-gradient(0deg, rgba(5,31,94,1) 26%, rgba(0,30,153,1) 64%, rgba(3,90,146,1) 100%);
@@ -84,9 +83,10 @@ h1 {
 }
 
 .subtitle {
-  text-shadow:  0.5px 0.5px 0.5px rgb(244, 244, 235);
+  text-shadow:  0.25px 0.25px 0.25px rgb(244, 244, 235);
   font-weight: 600;
   font-size: 1.25rem;
+  text-transform: uppercase;
   cursor: default;
   margin: 0.5rem;
   padding-bottom: 0rem;
@@ -96,9 +96,12 @@ h1 {
   font-size: 1.25rem;
   font-weight: 400;
   color: #e6f1ff;
-  line-height: 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+.intro-text {
+  line-height: 2rem;
 }
 
 p {
@@ -110,9 +113,10 @@ p {
 .steps {
   color: #20232a;
   background-color: rgb(237, 255, 157);
-  border-radius: 25px;
+  border-radius: 5px;
+  font-family: 'Dosis', sans-serif;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.15rem;
   padding: 0.25rem 1rem;
   margin-top: 2rem;
@@ -126,10 +130,11 @@ input {
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 1rem;
   margin: 1rem auto;
+  margin-bottom: 1.5rem;
 }
 
 .copy-output {
-  background-color: rgb(230, 212, 187);
+  background-color: rgb(237, 220, 210);
   border-color: rgb(219, 128, 9);
 }
 
@@ -310,7 +315,7 @@ footer span {
   }
 
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     padding-bottom: 0rem;
   }
 
@@ -348,15 +353,15 @@ footer span {
   }
 
   .neutron-image {
-    margin-top: 0.25rem;
+    margin-top: 0.125rem;
     width: 50px;
     border-radius: 15px;
   }
 
   .code-link-container {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     margin-bottom: 0.5rem;
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   footer {
