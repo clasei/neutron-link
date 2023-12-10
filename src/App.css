@@ -22,8 +22,7 @@ body, html {
 body {
   font-family: Roboto, sans-serif;
   letter-spacing: 2px;
-  background: rgb(5,31,94);
-  background: linear-gradient(0deg, rgba(5,31,94,1) 26%, rgba(0,30,153,1) 64%, rgba(3,90,146,1) 100%);
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   color: #e6f1ff;
   box-sizing: border-box;
 }
@@ -57,7 +56,7 @@ body {
 header {
   background-color: transparent;
   font-family: 'Dosis', sans-serif;
-  color: rgb(205, 219, 9);
+  color: rgb(237, 255, 157);
   margin-top: 0.25rem;
   margin-bottom: 1rem;
   z-index: 2;
@@ -65,13 +64,17 @@ header {
 }
 
 h1 {
-  text-shadow:  1px 1px 1px rgb(244, 244, 235);
-  font-size: 5rem;
+  background-color: #20232a7e;
+  border: 1px solid rgb(237, 255, 157);
+  border-radius: 5px;
+  text-shadow:  1px 1px 1px rgb(23, 23, 23);
+  font-size: 4.5rem;
   letter-spacing: 5px;
   font-weight: 750;
   display: inline-block;
   cursor: default;
   margin-bottom: 1rem;
+  padding: 0.25rem 1rem;
 }
 
 .header-title {
@@ -84,7 +87,7 @@ h1 {
 }
 
 .subtitle {
-  text-shadow:  0.25px 0.25px 0.25px rgb(244, 244, 235);
+  text-shadow:  0.25px 0.25px 0.25px rgb(23, 23, 23);
   font-weight: 600;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -99,7 +102,7 @@ h1 {
   font-weight: 400;
   color: #e6f1ff;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .intro-text {
@@ -130,6 +133,7 @@ p {
 input {
   min-width: 250px;
   border-radius: 25px;
+  border-color: rgb(219, 128, 9);
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 1rem;
   margin: 1rem auto;
@@ -153,7 +157,7 @@ button {
   font-weight: bolder;
   letter-spacing: 2px;
   color: #20232a;
-  background-color: #61dafb;
+  background-color: rgb(219, 128, 9);
   cursor: pointer;
   transition: border-color 0.25s;
   transition: transform 0.2s ease;
@@ -161,7 +165,7 @@ button {
 
 button:hover {
   border-color: #646cff;
-  background-color: rgb(219, 128, 9);
+  background-color: #61dafb;
   border-color: #e6f1ff;
   border: 3px;
   border-style: groove;
@@ -178,6 +182,10 @@ button:focus-visible {
   background-color: rgb(87, 110, 241);
   color: #e6f1ff;
   margin-bottom: 1rem;
+}
+
+.repeat-button:hover {
+  color: #20232a;
 }
 
 .info, .form, .shortened, .input-link {
@@ -313,7 +321,7 @@ footer span {
   }
     
   h1 {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
     margin-bottom: 0.5rem;
   }
 
