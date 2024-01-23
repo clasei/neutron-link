@@ -8,7 +8,7 @@ function Info() {
 
     return (
       <div className="info">
-        <p className="steps">SHARE & ENJOY</p>
+        <p className="steps">SHARE SHAMELESSLY</p>
         <div>
           <img src={neutronLinkImage} alt="this is a neutron" className="neutron-image" />
         </div>
