@@ -152,7 +152,7 @@ input {
 button {
   width: 120px;
   border-radius: 8px;
-  border: 1px solid #e6f1ff;;
+  border: 1.5px solid #e6f1ff;;
   box-shadow: 1px 1px 2.5px rgb(244, 244, 235);
   padding: 0.5rem 1rem;
   margin: 1rem;
@@ -316,7 +316,7 @@ footer span {
   }
     
   h1 {
-    font-size: 2.85rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
   }
 
@@ -326,12 +326,13 @@ footer span {
   }
 
   .intro {
-    margin: 0.5rem auto;
+    margin: 0.5rem;
+    width: 300px;
   }
 
   .intro-text {
     font-size: 0.85rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
   }
 
   p {
@@ -340,14 +341,15 @@ footer span {
   }
 
   .steps {
-    min-width: 200px;
+    min-width: 250px;
     font-size: 0.8rem;
     padding: 0.25rem 0.25rem;
     margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 
   button {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     font-size: 0.95rem;
   }
 
@@ -365,6 +367,7 @@ footer span {
 
   .neutron-image {
     margin-top: 0.125rem;
+    margin-bottom: 0rem;
     width: 50px;
     border-radius: 15px;
   }
