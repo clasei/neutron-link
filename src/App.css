@@ -318,11 +318,13 @@ footer span {
   h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    letter-spacing: 2px;
   }
 
   .subtitle {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     padding-bottom: 0rem;
+    letter-spacing: 2px;
   }
 
   .intro {
@@ -331,7 +333,7 @@ footer span {
   }
 
   .intro-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
   }
 
@@ -350,7 +352,7 @@ footer span {
 
   button {
     margin-bottom: 1rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   input {
