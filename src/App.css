@@ -65,9 +65,9 @@ header {
 
 h1 {
   background-color: #20232a7e;
-  border: 1px solid rgb(147, 147, 147);
+  border: 1px solid rgb(227, 227, 227);
   border-radius: 5px;
-  text-shadow:  1px 1px 1px rgb(23, 23, 23);
+  text-shadow:  2px 2px 2px rgb(142, 142, 142);
   font-size: 4.5rem;
   letter-spacing: 3px;
   font-weight: 750;
@@ -316,9 +316,10 @@ footer span {
   }
     
   h1 {
-    font-size: 3rem;
+    font-size: 3.1rem;
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
+    padding: 0.25rem 1.5rem;
   }
 
   .subtitle {
