@@ -61,7 +61,6 @@ header {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   z-index: 2;
-  animation: fadeIn 3s ease-out forwards;
 }
 
 h1 {
@@ -99,6 +98,7 @@ h1 {
   margin-top: 1rem;
   margin-bottom: 0rem;
   padding-bottom: 0rem;
+  animation: fadeIn 2s ease-out forwards;
 }
 
 .intro {
@@ -108,7 +108,7 @@ h1 {
   color: #e6f1ff;
   text-align: center;
   margin-bottom: 1rem;
-  animation: fadeIn 3s ease-out forwards;
+  animation: fadeIn 2s ease-out forwards;
 }
 
 .intro-text {
